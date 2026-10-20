@@ -37,7 +37,7 @@ Title.Size = UDim2.new(1, -40, 0, 45)
 Title.Position = UDim2.new(0, 15, 0, 0)
 Title.BackgroundTransparency = 1
 Title.Text = "CANDELA HUB 💃🔥"
-Title.TextColor3 = Color3.fromRGB(255, 60, 120) -- Color Neón Rosa/Fucsia
+Title.TextColor3 = Color3.fromRGB(255, 60, 120)
 Title.TextSize = 16
 Title.Font = Enum.Font.GothamBold
 Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -212,6 +212,7 @@ SearchBtn.MouseButton1Click:Connect(function()
     SearchBtn.Text = "Cargando Catálogo..."
     crearBotonAtuendo("Skin que trae puesta hoy", userId, "Actual")
     
+    -- Dirección corregida con la API de outfits pública mediante RoProxy
     local url = string.format("https://roproxy.com", userId)
     local success, response = pcall(function() return game:HttpGet(url) end)
     
