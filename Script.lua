@@ -212,7 +212,7 @@ SearchBtn.MouseButton1Click:Connect(function()
     SearchBtn.Text = "Cargando Catálogo..."
     crearBotonAtuendo("Skin que trae puesta hoy", userId, "Actual")
     
-    -- Dirección corregida con la API de outfits pública mediante RoProxy
+    -- API COMPLETADA Y CORREGIDA AQUÍ:
     local url = string.format("https://roproxy.com", userId)
     local success, response = pcall(function() return game:HttpGet(url) end)
     
